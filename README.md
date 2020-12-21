@@ -1,6 +1,6 @@
 # Protongame
 
-## Etablir une stratégie de communication, de nos jours est primordial pour la survie de l'entreprise. De nouvelles idées permettent de développer des relations avec ses clients, ou avec des prospects: Protongame.##
+## Etablir une stratégie de communication, de nos jours est primordial pour la survie de l'entreprise. De nouvelles idées permettent de développer des relations avec ses clients, ou avec des prospects: Protongame.
 
 L'expérience utilisateur (UX) permet d'envisager une dimension plus grande dans la recherche de prospects, avec l'utilisation d'une application qui fait interagir le visiteur. Protongame est un jeu de hasard très simple, l'utilisateur en cas de victoire gagne une importante remise sur nos produits. Cette application est suivie par une analytique précise, une intégration segment avec une connexion pipedream pour collecter des informations relatives à cette expérience utilisateur. Ces informations peuvent être stockées dans une base de données tel que mongodb.
 
@@ -19,3 +19,25 @@ Je vous invite à vous connecter sur :
 [Protongame](https://fredericbrodar.com/protongame/)
 
 <img src="https://dev.fredericbrodar.com/img/protongame.PNG" />
+
+## Utilisation de pipedream avec Segment:
+
+Pipedream est une plate-forme d’intégration pour les développeurs de créer et d’exécuter des workflows qui intègrent des applications et des données.
+
+ - Développez n’importe quel flux de travail, basé sur n’importe quel déclencheur.
+ - Les workflows sont du code, que vous pouvez exécuter gratuitement.
+ - Les flux de travail s’exécutent sans serveur : vous ne gérez aucune infrastructure propre.
+
+## Obtenir des données avec segment:
+
+La spécification de segment fournit des conseils sur les données significatives à capturer, et le meilleur format pour celles-ci, dans toutes les bibliothèques et API. Lorsque vous utilisez ces formats, il est simple d’envoyer des données aux outils en aval.
+
+<img src="https://dev.fredericbrodar.com/img/segment.PNG" />
+
+ - Ainsi, pour les besoins du site, les données de connexion sont à destination du Webhook qui est paramétré dans Pipedream.
+
+<img src="https://dev.fredericbrodar.com/img/pipedream.jpg" />
+
+ - Les données récupérées sont transitoires, et peuvent être stockées dans une base de donnée comme Mongodb. 
+
+<img src="https://www.protonwebmaster.com/static/media/pipedream-mongodb-min.cb57216b.jpg" />
