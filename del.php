@@ -10,7 +10,7 @@
             die("Connection failed: " . mysqli_connect_error());
         }
         $ip=$_SERVER['REMOTE_ADDR'];
-        $sql = "DELETE FROM prtg WHERE ip = '$ip'";
+        $sql = "DELETE FROM xxxx WHERE ip = '$ip'";
             if ($conn->query($sql) === TRUE) {
                 echo "Record deleted successfully";
             } else {

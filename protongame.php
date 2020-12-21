@@ -1,9 +1,9 @@
 <?php
 include 'connect.php';
 $ip=$_SERVER['REMOTE_ADDR'];
-$sql =  'SELECT ip FROM prtg';
+$sql =  'SELECT xxx FROM xxx';
 foreach  ($conn->query($sql) as $row) {
-   if($row['ip'] === $ip){
+   if($row['xxx'] === $xxx){
     header("Location: https://fredericbrodar.com/protongame/reloadgame.php");
    }
 }
@@ -431,7 +431,7 @@ sleep(1);
 date_default_timezone_set('Europe/Paris');
 $date=date("Y-m-d H:i:s");
 $ip=$_SERVER['REMOTE_ADDR'];
-$sql = "INSERT INTO prtg (date, ip)
+$sql = "INSERT INTO xxx (date, ip)
 VALUES ('$date','$ip')";
 if (mysqli_query($conn, $sql)) {
     echo ".";
