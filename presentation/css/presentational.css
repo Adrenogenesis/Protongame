@@ -1,0 +1,234 @@
+/* Presentational style rules only
+ * Not required
+ */
+
+html, body, .container {
+  height: 100%;
+}
+
+/* Reset */
+html, body, h1, p, a, div, section {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  font: inherit;
+}
+
+/* Basic */
+body { 
+  font: 18px/23px "Cantarell", sans-serif;
+  color: #ffffff;
+}
+
+img {
+  max-width: 100%;
+}
+
+h1, blockquote {
+  font-size: clamp(var(--min), var(--val), var(--max));
+ } 
+
+ h1 {
+  --min: 1.5em;
+  --val: 5vw;
+  --max: 3em;
+ }
+
+h1 {
+  color: #ff0000;
+  text-transform: uppercase;
+  line-height: 50px;
+  font-weight: bold;
+  margin-top: 20px;
+  background-color: #ffffffa6;
+  box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+  animation: blinker 3s linear infinite;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
+a {
+  color: #ffffff;
+}
+
+p {
+  margin: 0 0 15px 0;
+}
+
+strong {
+  font-weight: 700;
+}
+
+blockquote {
+  --min: 0.8em;
+  --val: 2.0vw;
+  --max: 1.1em;
+ }
+
+blockquote {
+  display: block;
+  max-width: 480px;
+  margin: 15px auto;
+  padding: 15px;
+  background-color: rgba(255, 255, 255, 0.767);  
+  color: #006eff;
+  font-family: "Kotta One", serif;
+  line-height: 28px;
+  text-align: left;
+}
+
+blockquote cite {
+  display: block;
+  font: 18px/23px "Cantarell", sans-serif;
+  font-size: 16px;
+  margin-top: 16px;
+  color: #666666;
+  text-transform: uppercase;
+}
+
+/* Layout */
+
+.navbar {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  height: 40px;
+  z-index: 9999;
+  position: fixed;
+}
+
+  .inner {
+    position: relative;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+.navbar a {
+  display: inline-block;
+  border: 1px solid #fff;
+  font-size: 14px;
+  line-height: 24px;
+  border-radius: 3px;
+  padding: 2px 15px;
+  text-decoration: none;
+  margin-top: 5px;
+}
+
+.container {
+  display: table;
+  padding-top: 80px;
+  width: 100%;
+}
+
+.content {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;  
+  justify-content: center;
+}
+
+.intro {
+  width: 50%;
+  height: auto;
+  margin-left: 25%;
+  margin-right: 25%;
+  overflow: hidden;
+  background-color: #647291c2;
+}
+
+/* Special */
+.sub-title {
+  margin: 50px auto;
+  font-size: 1.5em;
+  line-height: 25px;
+  text-transform: uppercase;
+}
+
+.button {
+  display: inline-block;
+  padding: 6px 10px;
+  color: #cafaea;
+  border: 1px solid #cafaea;
+  border-radius: 3px;
+  font-weight: 700;
+  line-height: normal;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+#more-content {
+  display: none;
+}
+
+.whatsapp {
+  width: 20%; 
+  height: auto;
+  margin-left: 40%;
+  margin-right: 40%;
+  overflow: hidden;
+  background-color: aquamarine;
+}
+
+/* Media Queries */
+@media only screen and (max-width: 340px) {
+  
+  .container {
+    position: relative;
+    display: block;
+    float: left;
+    vertical-align: baseline;
+    margin: 0 auto;
+    padding: 80px 0 0 0;
+  }
+  
+  #more-content {
+    float: left;
+    margin-right: 10px;
+    
+  }
+  
+  body h1 {
+    font-size: 18px;
+    line-height: 23px;
+  } 
+  
+  .content, blockquote {  
+    display: inline;
+    margin: 0 auto;
+    padding-top: 80px;
+    vertical-align: baseline;
+  }
+
+  blockquote {
+    width: 150px;
+    margin: 15px auto;
+    font-size: 16px;
+    line-height: 21px;
+    background-color: transparent;
+  }
+
+  blockquote cite {
+    font-size: 14px;
+    line-height: 19px;
+  }
+
+  .sub-title {
+    font-size: 14px;
+    line-height: 21px;
+  }
+
+  .button, p {
+    max-width: 150px;
+    margin: 0 auto;
+    font-size: 15px;
+    line-height: 20px;
+  }
+
+  html, body, .container {
+    height: auto;
+  }
+}
